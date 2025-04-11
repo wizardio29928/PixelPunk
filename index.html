@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="./index.js"></script>
     <style>
-        body {
+      body {
     background-image: url('./img/the-last-of-us-part-2-site-02.webp');
     background-attachment: fixed;
     background-size: cover;
@@ -32,9 +32,9 @@
             cursor: pointer;
         }
         .container {
-            padding: 40px;
+            padding: 10px;
             background-color: rgba(0,0,0,0.6);
-            margin: 50px;
+            margin: 20px;
             border-radius: 10px;
         }
         .ua-text {
@@ -119,5 +119,17 @@
             document.querySelector('.ua-text').style.display = lang === 'ua' ? 'block' : 'none';
         }
     </script>
+    <!-- Кнопка -->
+  <button class="menu-button" onclick="toggleMenu()">☰ Меню</button>
+
+  <!-- Модалка -->
+  <div class="modal" id="menuModal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="toggleMenu()">✖</button>
+      <h2>Навігація</h2>
+      <div id="tabList"></div>
+    </div>
+  </div>
+
 </body>
 </html>

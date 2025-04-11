@@ -30,3 +30,29 @@ function applyResponsiveDesign() {
     // Запуск при завантаженні та зміні розміру
     window.addEventListener('load', applyResponsiveDesign);
     window.addEventListener('resize', applyResponsiveDesign);
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const tabs = [
+          { id: 1, name: "the last of us 2", link: "index.html" },
+          { id: 2, name: "red dead redemption 2", link: "/rdr2/rdr2.html" },
+          { id: 3, name: "the witcher 3", link: "/witcher/witcher.html" },
+          // Додавай нові вкладки тут
+        ];
+      
+        const tabList = document.getElementById("tabList");
+      
+        if (tabList) {
+          tabs.forEach(tab => {
+            const a = document.createElement("a");
+            a.className = "tab-item";
+            a.innerText = tab.name;
+            a.href = tab.link;
+            tabList.appendChild(a);
+          });
+        }
+      });
+      
+      function toggleMenu() {
+        document.getElementById("menuModal").classList.toggle("open");
+      }
